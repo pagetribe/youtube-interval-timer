@@ -11,7 +11,7 @@ interface PresetManagerProps {
 const PresetManager: React.FC<PresetManagerProps> = ({ presets, onLoad }) => {
   return (
     <div className="w-full max-w-4xl bg-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-700">
-      <h3 className="text-xl font-bold text-center text-white mb-4">Saved Presets</h3>
+      {/* <h3 className="text-xl font-bold text-center text-white mb-4">Saved Presets</h3> */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {presets.map((preset, index) => (
           <div key={index} className="bg-gray-700 p-4 rounded-lg flex flex-col min-h-[230px]">
