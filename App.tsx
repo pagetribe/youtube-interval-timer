@@ -186,7 +186,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center p-4 sm:p-6 lg:p-8 font-sans">
+    <div className="bg-gray-900 text-white min-h-screen flex flex-col items-center font-sans">
       <main className="w-full max-w-4xl mx-auto flex flex-col items-center space-y-8">
         {activeConfig && (
           <div className="w-full relative">

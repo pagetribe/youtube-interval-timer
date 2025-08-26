@@ -25,12 +25,7 @@ const PresetManager: React.FC<PresetManagerProps> = ({ presets, onLoad }) => {
                      <YouTubeIcon className="w-4 h-4 text-red-400 flex-shrink-0" />
                      <p className="truncate" title={preset.url}>{preset.url}</p>
                    </div>
-                   <p><span className="font-semibold">Trigger:</span> {formatSecondsToTime(preset.triggerTimestamp)}</p>
-                   {preset.intervals ? (
-                     <p><span className="font-semibold">Timer:</span> {preset.intervals.length} varied intervals</p>
-                   ) : (
-                     <p><span className="font-semibold">Timer:</span> {formatSecondsToTime(preset.duration!)} / {formatSecondsToTime(preset.cooldownDuration!)}</p>
-                   )}
+                   <p><span className="font-semibold">Trigger:</span> {formatSecondsToTime(preset.triggerTimestamp)} | <span className="font-semibold">Timer:</span> {preset.intervals ? `${preset.intervals.length} varied intervals` : `${formatSecondsToTime(preset.duration!)} / ${formatSecondsToTime(preset.cooldownDuration!)}`}</p>
                 </div>
               ) : (
                 <p className="text-sm text-gray-400 mt-4">Empty Slot</p>
