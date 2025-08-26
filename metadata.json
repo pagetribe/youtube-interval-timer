@@ -1,5 +1,0 @@
-{
-  "name": "YouTube Timestamp Timer",
-  "description": "An application to play a YouTube video and start a 30-second countdown timer at a specified timestamp. The timer provides audio cues at the beginning and end.",
-  "requestFramePermissions": []
-}
