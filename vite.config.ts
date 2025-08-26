@@ -8,6 +8,7 @@ export default defineConfig(({ mode }) => {
       // 1. Add this line for GitHub Pages
       base: '/youtube-interval-timer/',
       
+      
 
       // 2. Make sure your plugins are here
       plugins: [react()], 
