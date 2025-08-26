@@ -11,12 +11,12 @@ interface PresetManagerProps {
 const PresetManager: React.FC<PresetManagerProps> = ({ presets, onLoad }) => {
   return (
     <div className="w-full max-w-4xl bg-gray-800 p-6 rounded-2xl shadow-2xl border border-gray-700">
-      {/* <h3 className="text-xl font-bold text-center text-white mb-4">Saved Presets</h3> */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
         {presets.map((preset, index) => (
-          <div key={index} className="bg-gray-700 p-4 rounded-lg flex flex-col min-h-[230px]">
+          <div key={index} className="bg-gray-700 p-4 rounded-lg flex flex-col">
             <div>
-              <h4 className="font-bold text-white h-12 overflow-hidden" title={preset?.title || `Preset ${index + 1}`}>
+              {/* CHANGE: Removed fixed height (h-12) and added a bottom margin (mb-3) for consistent spacing. */}
+              <h4 className="font-bold text-white mb-3 overflow-hidden" title={preset?.title || `Preset ${index + 1}`}>
                 {preset?.title || `Preset ${index + 1}`}
               </h4>
               {preset ? (
@@ -36,7 +36,7 @@ const PresetManager: React.FC<PresetManagerProps> = ({ presets, onLoad }) => {
                 <p className="text-sm text-gray-400 mt-4">Empty Slot</p>
               )}
             </div>
-            <div className="text-sm mt-auto">
+            <div className="text-sm mt-4">
                 <button
                     onClick={() => onLoad(index)}
                     disabled={!preset}
