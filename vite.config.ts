@@ -6,6 +6,7 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
       // 1. Add this line for GitHub Pages
+      base: '/youtube-interval-timer/',
       
 
       // 2. Make sure your plugins are here
