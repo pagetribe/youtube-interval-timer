@@ -14,13 +14,13 @@ const PresetManager: React.FC<PresetManagerProps> = ({ presets, onLoad }) => {
       <h3 className="text-xl font-bold text-center text-white mb-4">Saved Presets</h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {presets.map((preset, index) => (
-          <div key={index} className="bg-gray-700 p-4 rounded-lg flex flex-col justify-between min-h-[230px]">
-            <div className="flex-grow">
+          <div key={index} className="bg-gray-700 p-4 rounded-lg flex flex-col min-h-[230px]">
+            <div>
               <h4 className="font-bold text-white h-12 overflow-hidden" title={preset?.title || `Preset ${index + 1}`}>
                 {preset?.title || `Preset ${index + 1}`}
               </h4>
               {preset ? (
-                <div className="text-sm text-gray-300 mt-2 space-y-1 overflow-hidden">
+                <div className="text-sm text-gray-300 space-y-1 overflow-hidden">
                    <div className="flex items-center gap-2">
                      <YouTubeIcon className="w-4 h-4 text-red-400 flex-shrink-0" />
                      <p className="truncate" title={preset.url}>{preset.url}</p>
@@ -33,10 +33,10 @@ const PresetManager: React.FC<PresetManagerProps> = ({ presets, onLoad }) => {
                    )}
                 </div>
               ) : (
-                <p className="text-sm text-gray-400 mt-2">Empty Slot</p>
+                <p className="text-sm text-gray-400 mt-4">Empty Slot</p>
               )}
             </div>
-            <div className="mt-auto pt-4 text-sm">
+            <div className="text-sm mt-auto">
                 <button
                     onClick={() => onLoad(index)}
                     disabled={!preset}
