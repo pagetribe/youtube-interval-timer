@@ -181,6 +181,7 @@ const App: React.FC = () => {
     if (preset) {
         resetApp();
         setActiveConfig(preset);
+        window.scrollTo(0, 0); // Scroll to top
     }
   };
 

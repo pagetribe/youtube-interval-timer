@@ -26,6 +26,7 @@ const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ videoId, onPlayerReady, o
             controls: 1,
             rel: 0,
             modestbranding: 1, // Helps minimize YouTube branding and overlays
+            mute: 1, // Mutes the video by default
           },
           events: {
             onReady: (event) => {
@@ -59,7 +60,7 @@ const YouTubePlayer: React.FC<YouTubePlayerProps> = ({ videoId, onPlayerReady, o
   }, [videoId]);
 
   return (
-    <div className="w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-700">
+    <div className="w-full aspect-video bg-black rounded-lg overflow-hidden shadow-2xl border border-gray-700 mb-4">
       <div id={PLAYER_CONTAINER_ID} className="w-full h-full"></div>
     </div>
   );
