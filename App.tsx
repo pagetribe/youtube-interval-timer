@@ -37,7 +37,7 @@ const App: React.FC = () => {
         }
       };
 
-    fetch('/presets.json')
+    fetch('presets.json')
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
