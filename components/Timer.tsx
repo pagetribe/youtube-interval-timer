@@ -120,12 +120,12 @@ const Timer: React.FC<TimerProps> = ({ duration, cooldownDuration, intervals, tr
           circleColorClass = 'stroke-red-400';
         } else {
           status = 'running';
-          circleColorClass = 'stroke-blue-400';
+          circleColorClass = 'stroke-green-400';
         }
         progress = (duration - timeIntoMainCountdown) / duration;
       } else if (timeIntoCycle < startOfPreparing) {
         status = 'cooldown';
-        circleColorClass = 'stroke-green-400';
+        circleColorClass = 'stroke-blue-400';
         const timeIntoCooldown = timeIntoCycle - startOfCooldown;
         displayedTime = Math.max(0, cooldownDuration - Math.floor(timeIntoCooldown));
         progress = (cooldownDuration - timeIntoCooldown) / cooldownDuration;
@@ -149,12 +149,12 @@ const Timer: React.FC<TimerProps> = ({ duration, cooldownDuration, intervals, tr
           circleColorClass = 'stroke-red-400';
         } else {
           status = 'running';
-          circleColorClass = 'stroke-blue-400';
+          circleColorClass = 'stroke-green-400';
         }
         progress = (duration - timeIntoMainCountdown) / duration;
       } else if (timeIntoCycle < startOfPreparing) {
         status = 'cooldown';
-        circleColorClass = 'stroke-green-400';
+        circleColorClass = 'stroke-blue-400';
         const timeIntoCooldown = timeIntoCycle - startOfCooldown;
         displayedTime = Math.max(0, cooldownDuration - Math.floor(timeIntoCooldown));
         progress = (cooldownDuration - timeIntoCooldown) / cooldownDuration;
