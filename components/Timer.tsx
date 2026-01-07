@@ -69,7 +69,7 @@ const Timer: React.FC<TimerProps> = ({ duration, cooldownDuration, intervals, tr
           circleColorClass = 'stroke-red-400';
         } else {
           status = 'running';
-          circleColorClass = 'stroke-blue-400';
+          circleColorClass = 'stroke-green-400';
         }
       } else { // Rest interval
         if (displayedTime <= PREPARING_SECONDS && displayedTime >= 1) {
@@ -77,7 +77,7 @@ const Timer: React.FC<TimerProps> = ({ duration, cooldownDuration, intervals, tr
           circleColorClass = 'stroke-purple-400';
         } else {
           status = 'cooldown';
-          circleColorClass = 'stroke-green-400';
+          circleColorClass = 'stroke-blue-400';
         }
       }
     }
